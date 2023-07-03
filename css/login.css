@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(/4189694_2238239.jpg);
+  font-family: 'Dancing Script', cursive;
+font-family: 'Poppins', sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+section .imgBox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+section .imgBox:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg,#e91e63,#03a9f4);
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+
+section .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrapper{
+    width:50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.login-form,
+.register-form{
+  width: 420px;
+  /* background: linear-gradient(160deg,#e91e63,#03a9f4);
+   */
+   background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.login-form h1,
+.register-form h1{
+  font-size: 36px;
+  text-align: center;
+}
+
+.login-form .input-box
+.register-form .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.login-form input[type='text'],
+.register-form input[type='text'],
+.login-form input[type='password'],
+.register-form input[type='password'] {
+    margin: 10px 0;
+}
+
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 12px 20px;
+}
+
+.input-box input::placeholder{
+  color: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 60px;
+    /* top: 29%; */
+    transform: translateY(116%);
+    font-size: 20px;
+}
+
+.bxs-envelope{
+    transform: translateY(66%) !important;
+}
+
+.login-form .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: 10px 0 15px;
+}
+
+.remember-forgot label input {
+  accent-color: #fff;
+  margin-right: 3px;
+}
+
+.remember-forgot a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.login-form .btn,
+.register-form .btn{
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.login-form .register-link,
+.login-link{
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.register-link p a ,
+.login-link p a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover,
+.login-link p a:hover{
+  text-decoration: underline;
+}
+
+.login-form{
+    display: none;
+}
+
+/* Register Form Styles */
+.register-form {
+  display: none; /* Hide the register form by default */
+}
+
+.login-form.register-active .register-form {
+  display: block; /* Show the register form when the register link is clicked */
+  animation: slide-in 0.3s ease-in-out forwards;
+}
+
+.login-form.register-active .register-link {
+  display: none; /* Hide the register link when the register form is active */
+}
+
+.login-form.register-active .login-link {
+  display: block; /* Show the login link when the register form is active */
+  animation: slide-in 0.3s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.show {
+  display: block;
+}
+
+@media(max-width: 900px){
+    /* section .imgBox{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left:0;
+    }
+    section{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    } */
+    .wrapper{
+        width: 65%;
+    }
+    .login-form,
+    .register-form{
+        background: transparent;
+    }
+}
+
+
+@media (max-width: 576px){
+    .login-form{
+        width: 340px;
+    }
+    .wrapper{
+        width: 85%;
+    }
+}
+
+@media (max-width: 380px){
+    .remember-forgot{
+        flex-direction: column;
+        align-items: center;
+    }
+    .remember-forgot a{
+        padding-top: 5px;
+    }
+}

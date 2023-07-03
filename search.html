@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyMonk | Recruitment</title>
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="nav" class="navigation">
+            <div class="nav-logo">
+                <a class="logo">
+                    <img src="img/logo.png" alt="StudyMonk">
+                </a>
+            </div>
+            <ul class="items">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/search.html">Search</a></li>
+            </ul>
+
+            <div class="login">
+                <a class="login_btn" href="/login.html">Login/SignUp</a>
+            </div>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/search.html">Search</a></li>
+            <div class="login">
+                <a class="login_btn" href="/login.html">Login/SignUp</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="search">
+        <h1>Search for candidates...</h1>
+
+        <div class="container">
+            <div class="filters">
+                <h2>Filters</h2>
+                <div>
+                    <label for="jobRole">Job Role:</label>
+                    <select id="jobRole">
+                        <option value="">All</option>
+                        <option value="Software Engineer">Software Engineer</option>
+                        <option value="Data Analyst">Data Analyst</option>
+                        <option value="Project Manager">Project Manager</option>
+                        <option value="Business Analyst">Business Analyst</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="location">Location:</label>
+                    <select id="location">
+                        <option value="">All</option>
+                        <option value="New York">New York</option>
+                        <option value="San Francisco">San Francisco</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Los Angeles">Los Angeles</option>
+                        <option value="Seattle">Seattle</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="search">Search:</label>
+                    <input type="text" id="search" placeholder="Enter candidate name">
+                    <button id="searchBtn">Search</button>
+                </div>
+            </div>
+
+            <div class="candidates" id="candidates"></div>
+        </div>
+
+    </div>
+
+
+    <script src="js/search.js"></script>
+</body>
+
+</html>
